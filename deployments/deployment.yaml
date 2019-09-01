@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: blncmangerdeployment
+  name: blncmangerdeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blncmangerdeployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: blncmangerdeployment
+    spec:
+      containers:
+      - image: jlpedrosa/balancemanager:0.0.2
+        name: balancemanager
+        resources: {}
+status: {}
