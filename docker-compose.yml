@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  balancemanagerapi:
+    image: ${DOCKER_REGISTRY-}balancemanagerapi
+    build:
+      context: .
+      dockerfile: balancemanagerAPI/Dockerfile
